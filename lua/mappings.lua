@@ -21,6 +21,9 @@ map("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", { noremap = true, silent = true
 
 map("n", "<leader>w", "<cmd>w<cr>", { noremap = true })
 
+--xclip
+map("n", "<leader>y", "<cmd>lua require('xclip').copy(vim.fn.getreg('+'))<cr>", { noremap = true })
+
 -- harpoon
 map("n", "<leader><C-Space>", "<cmd>lua require('harpoon.cmd-ui').toggle_quick_menu()<CR>")
 map("n", "<leader>tu", "<cmd>lua require('harpoon.term').gotoTerminal(1)<CR>")
